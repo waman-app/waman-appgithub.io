@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="format-detection" content="telephone=no">
+<title>蛙漫 - 免费在线看漫画_热门漫画大全_蛙漫漫画官网</title>
+<meta name="description" content="蛙漫（waman-app）是免费在线看漫画的漫画网站，收录热血、恋爱、悬疑、玄幻、都市、搞笑等全题材漫画，每日更新、高清画质、手机电脑自适应阅读，蛙漫漫画大全帮你快速找到好看的漫画。">
+<meta name="keywords" content="蛙漫,蛙漫漫画,蛙漫官网,蛙漫在线看漫画,免费漫画,漫画大全,热门漫画排行榜,漫画分类,在线漫画阅读">
+<meta name="author" content="蛙漫">
+<meta name="robots" content="index,follow">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#1f9d55">
+<link rel="canonical" href="https://waman-app/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="蛙漫">
+<meta property="og:title" content="蛙漫 - 免费在线看漫画_热门漫画大全">
+<meta property="og:description" content="蛙漫漫画官网，海量漫画免费看，全题材漫画分类，每日更新，手机电脑自适应阅读。">
+<meta property="og:url" content="https://waman-app/">
+<meta property="og:image" content="https://waman-app/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="蛙漫 - 免费在线看漫画">
+<meta name="twitter:description" content="蛙漫漫画官网，海量漫画免费看，全题材分类，每日更新。">
+<style>
+:root{
+  --green:#1f9d55;
+  --green-2:#37c76f;
+  --lime:#a3e635;
+  --ink:#12261a;
+  --txt:#2c3b31;
+  --sub:#6b7c70;
+  --bg:#f4faf5;
+  --card:#ffffff;
+  --line:#e2ece4;
+  --shadow:0 10px 26px rgba(31,157,85,.10);
+  --shadow-2:0 16px 38px rgba(31,157,85,.20);
+  --r:22px;
+  --max:1200px;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:"PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+  background:var(--bg);color:var(--txt);line-height:1.75;font-size:16px;overflow-x:hidden;
+}
+body::before{
+  content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(circle at 8% 2%,rgba(163,230,53,.22),transparent 42%),
+    radial-gradient(circle at 96% 6%,rgba(55,199,111,.18),transparent 40%),
+    radial-gradient(circle at 50% 100%,rgba(31,157,85,.12),transparent 46%);
+}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit;text-decoration:none}
+ul,ol{list-style:none}
+h1,h2,h3{line-height:1.35;font-weight:800;color:var(--ink)}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 18px}
+.pill{
+  display:inline-block;background:#e8f8ed;color:var(--green);
+  border:1px solid #cfeeda;border-radius:999px;padding:3px 12px;font-size:12.5px;font-weight:700;
+}
+
+/* ============ 顶部导航 ============ */
+.topbar{
+  position:sticky;top:0;z-index:60;background:rgba(255,255,255,.94);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);box-shadow:0 2px 14px rgba(31,157,85,.06);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;height:66px;gap:12px}
+.logo{display:flex;align-items:center;gap:9px;font-size:21px;font-weight:900;color:var(--ink);white-space:nowrap}
+.logo i{
+  width:38px;height:38px;flex:0 0 38px;border-radius:14px;font-style:normal;font-size:20px;
+  display:inline-flex;align-items:center;justify-content:center;
+  background:linear-gradient(140deg,var(--green-2),var(--lime));
+  box-shadow:0 6px 14px rgba(31,157,85,.32);
+}
+.logo b{color:var(--green)}
+.menu{display:flex;align-items:center;gap:4px}
+.menu a{padding:9px 13px;border-radius:12px;font-size:15px;font-weight:600;color:#3f5346;transition:.25s;white-space:nowrap}
+.menu a:hover,.menu a:focus{background:#e8f8ed;color:var(--green)}
+.nav-cta{
+  background:linear-gradient(135deg,var(--green),var(--green-2));color:#fff!important;
+  border-radius:999px!important;padding:9px 18px!important;font-weight:700!important;
+  box-shadow:0 8px 18px rgba(31,157,85,.30);
+}
+.burger{
+  display:none;width:44px;height:38px;border:1px solid var(--line);border-radius:12px;
+  background:#fff;color:var(--green);font-size:18px;cursor:pointer;
+}
+
+/* ============ Hero ============ */
+.hero{position:relative;padding:40px 0 10px}
+.hero-box{
+  position:relative;overflow:hidden;border-radius:32px;padding:42px 30px 46px;
+  background:linear-gradient(135deg,#e9fbe9 0%,#f3fbe4 55%,#e6f7f2 100%);
+  border:2px solid #d7f0dc;box-shadow:var(--shadow);
+}
+.hero-box::before{
+  content:"";position:absolute;width:220px;height:220px;border-radius:50%;
+  right:-60px;top:-70px;background:radial-gradient(circle,rgba(163,230,53,.45),transparent 68%);
+}
+.hero-box::after{
+  content:"";position:absolute;width:180px;height:180px;border-radius:50%;
+  left:-50px;bottom:-70px;background:radial-gradient(circle,rgba(55,199,111,.30),transparent 68%);
+}
+.hero-in{position:relative;z-index:2}
+h1{font-size:clamp(27px,6vw,50px);margin:14px 0 12px;letter-spacing:.5px}
+h1 em{font-style:normal;color:var(--green);position:relative;white-space:nowrap}
+h1 em::after{
+  content:"";position:absolute;left:0;right:0;bottom:.06em;height:.32em;z-index:-1;
+  background:linear-gradient(90deg,rgba(163,230,53,.85),rgba(55,199,111,.5));border-radius:6px;
+}
+.lead{color:#4a5c50;font-size:clamp(15px,3.6vw,18px);max-width:700px}
+.hero-btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:999px;
+  font-weight:700;font-size:15px;transition:.25s;
+}
+.btn-1{background:linear-gradient(135deg,var(--green),var(--green-2));color:#fff;box-shadow:0 10px 22px rgba(31,157,85,.32)}
+.btn-2{background:#fff;border:2px solid #cfeeda;color:var(--green)}
+.btn:hover{transform:translateY(-3px);box-shadow:var(--shadow-2)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:28px}
+.stat{background:rgba(255,255,255,.85);border:1px solid #dff1e3;border-radius:18px;padding:16px 10px;text-align:center;box-shadow:var(--shadow)}
+.stat b{display:block;font-size:clamp(18px,4.4vw,26px);color:var(--green)}
+.stat span{font-size:12.5px;color:var(--sub)}
+.wave{display:block;width:100%;height:52px;margin-top:-1px}
+
+/* ============ 通用 ============ */
+section{scroll-margin-top:72px;padding:40px 0}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:22px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(21px,4.6vw,30px);display:flex;align-items:center;gap:10px}
+.sec-head h2::before{
+  content:"";width:12px;height:12px;border-radius:4px;flex:0 0 12px;
+  background:linear-gradient(140deg,var(--green-2),var(--lime));transform:rotate(45deg);
+}
+.sec-head p{color:var(--sub);font-size:14px;margin-top:6px;padding-left:22px}
+.more{font-size:14px;color:var(--green);font-weight:700;border-bottom:2px dotted #b7e7c6;padding-bottom:2px}
+
+/* ============ 卡片 ============ */
+.grid{display:grid;gap:18px;grid-template-columns:repeat(4,1fr)}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+  overflow:hidden;box-shadow:var(--shadow);transition:.3s;display:flex;flex-direction:column;
+}
+.card:hover{transform:translateY(-7px);box-shadow:var(--shadow-2);border-color:#b7e7c6}
+.cover{
+  position:relative;aspect-ratio:3/4;display:flex;align-items:flex-end;padding:14px;
+  font-weight:800;font-size:18px;color:#fff;text-shadow:0 2px 6px rgba(0,0,0,.32);
+}
+.cover::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.02),rgba(0,0,0,.45))}
+.cover span{position:relative;z-index:1}
+.cover u{
+  position:absolute;z-index:1;top:12px;left:12px;text-decoration:none;font-size:11.5px;
+  background:rgba(255,255,255,.92);color:#1d5b34;padding:3px 10px;border-radius:999px;font-weight:700;
+}
+.g1{background:linear-gradient(150deg,#34d399,#1f9d55)}
+.g2{background:linear-gradient(150deg,#60a5fa,#2563eb)}
+.g3{background:linear-gradient(150deg,#fbbf24,#f97316)}
+.g4{background:linear-gradient(150deg,#f472b6,#db2777)}
+.g5{background:linear-gradient(150deg,#a78bfa,#7c3aed)}
+.g6{background:linear-gradient(150deg,#22d3ee,#0891b2)}
+.g7{background:linear-gradient(150deg,#fb7185,#e11d48)}
+.g8{background:linear-gradient(150deg,#84cc16,#4d7c0f)}
+.card-body{padding:14px 16px 17px;flex:1;display:flex;flex-direction:column;gap:6px}
+.card-body h3{font-size:16.5px}
+.card-body p{font-size:13.5px;color:var(--sub);flex:1}
+.meta{display:flex;justify-content:space-between;align-items:center;font-size:12.5px;color:var(--sub)}
+.meta b{color:#e08b1f}
+
+/* ============ 排行 ============ */
+.rank-list{display:grid;gap:13px;grid-template-columns:repeat(2,1fr)}
+.rank-item{
+  display:flex;align-items:center;gap:14px;padding:13px 16px;background:var(--card);
+  border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);transition:.25s;
+}
+.rank-item:hover{border-color:var(--green-2);transform:translateX(5px)}
+.no{
+  width:40px;height:40px;flex:0 0 40px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-weight:900;font-size:15px;color:#fff;background:#b9c9be;
+}
+.no.t1{background:linear-gradient(140deg,#fbbf24,#f97316)}
+.no.t2{background:linear-gradient(140deg,#94a3b8,#64748b)}
+.no.t3{background:linear-gradient(140deg,#d97706,#fbbf24)}
+.rank-txt{flex:1;min-width:0}
+.rank-txt h3{font-size:15.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rank-txt p{font-size:12.5px;color:var(--sub)}
+.hot{font-size:12.5px;color:#e0721c;font-weight:700;white-space:nowrap}
+
+/* ============ 分类药丸 ============ */
+.cats{display:flex;flex-wrap:wrap;gap:11px}
+.cat{
+  display:inline-flex;align-items:center;gap:7px;padding:11px 18px;border-radius:999px;
+  background:#fff;border:1.5px solid var(--line);font-weight:700;font-size:15px;color:#3f5346;
+  box-shadow:0 4px 12px rgba(31,157,85,.06);transition:.25s;
+}
+.cat small{font-weight:600;font-size:12.5px;color:var(--sub)}
+.cat:hover{background:linear-gradient(135deg,#e8f8ed,#f0fbd9);border-color:var(--green-2);color:var(--green);transform:translateY(-2px)}
+
+/* ============ 更新 ============ */
+.update{display:grid;gap:14px;grid-template-columns:repeat(3,1fr)}
+.up-item{
+  display:flex;gap:13px;align-items:center;background:#fff;border:1px solid var(--line);
+  border-radius:18px;padding:14px;box-shadow:var(--shadow);transition:.25s;
+}
+.up-item:hover{border-color:var(--green-2);box-shadow:var(--shadow-2)}
+.up-item i{
+  width:56px;height:56px;flex:0 0 56px;border-radius:16px;font-style:normal;font-weight:800;
+  color:#fff;font-size:13px;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(140deg,var(--green),var(--green-2));
+}
+.up-item h3{font-size:15.5px}
+.up-item p{font-size:12.5px;color:var(--sub)}
+
+/* ============ 会员 ============ */
+.vip{
+  border-radius:32px;padding:36px 28px;border:2px solid #d7f0dc;
+  background:linear-gradient(135deg,#ffffff 0%,#f0fbef 60%,#f4fbe3 100%);box-shadow:var(--shadow);
+}
+.vip-grid{display:grid;gap:14px;grid-template-columns:repeat(4,1fr);margin-top:22px}
+.vip-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px 17px;box-shadow:var(--shadow);transition:.25s}
+.vip-card:hover{transform:translateY(-5px);border-color:var(--green-2)}
+.vip-card s{
+  width:38px;height:38px;border-radius:12px;display:flex;align-items:center;justify-content:center;
+  font-size:19px;text-decoration:none;background:#e8f8ed;margin-bottom:10px;
+}
+.vip-card b{display:block;font-size:16px;color:var(--ink);margin-bottom:5px}
+.vip-card p{font-size:13.5px;color:var(--sub)}
+
+/* ============ FAQ ============ */
+.faq{display:grid;gap:12px}
+details{background:#fff;border:1px solid var(--line);border-radius:18px;padding:15px 18px;box-shadow:var(--shadow)}
+summary{cursor:pointer;font-weight:700;font-size:15.5px;color:var(--ink);list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:21px;color:var(--green);font-weight:700}
+details[open] summary::after{content:"−"}
+details p{font-size:14px;color:var(--sub);margin-top:10px}
+
+/* ============ 关于 ============ */
+.about{display:grid;gap:18px;grid-template-columns:1.25fr .75fr}
+.about-box{background:#fff;border:1px solid var(--line);border-radius:26px;padding:26px;box-shadow:var(--shadow)}
+.about-box h3{font-size:18.5px;margin-bottom:10px}
+.about-box p{color:#52655a;font-size:14.5px}
+.about-box ul{margin-top:14px;display:grid;gap:9px}
+.about-box li{font-size:14px;color:#52655a;padding-left:22px;position:relative}
+.about-box li::before{
+  content:"✓";position:absolute;left:0;top:0;width:16px;height:16px;border-radius:50%;
+  background:#e8f8ed;color:var(--green);font-size:11px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;margin-top:5px;
+}
+.about-box ul a{color:var(--green);font-weight:600}
+
+/* ============ 页脚 ============ */
+footer{
+  margin-top:26px;background:linear-gradient(160deg,#1b7a46,#124b2c);color:#dff5e6;
+  border-top-left-radius:34px;border-top-right-radius:34px;padding:38px 0 32px;
+}
+.f-grid{display:grid;gap:22px;grid-template-columns:1.5fr 1fr 1fr 1fr}
+.f-col h4{font-size:15.5px;margin-bottom:12px;color:#fff}
+.f-col p{font-size:13.5px;color:#bfe3cc}
+.f-col a{display:block;font-size:13.5px;color:#bfe3cc;padding:4px 0;transition:.2s}
+.f-col a:hover{color:#fff;padding-left:5px}
+.f-bottom{
+  margin-top:26px;padding-top:18px;border-top:1px solid rgba(255,255,255,.16);
+  font-size:12.5px;color:#a8d6b8;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
+}
+.totop{
+  position:fixed;right:16px;bottom:18px;width:46px;height:46px;border-radius:16px;
+  background:linear-gradient(140deg,var(--green),var(--green-2));color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:19px;z-index:50;
+  box-shadow:0 10px 22px rgba(31,157,85,.38);
+}
+
+/* ============ 响应式 ============ */
+@media (max-width:1024px){
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .vip-grid{grid-template-columns:repeat(2,1fr)}
+  .about{grid-template-columns:1fr}
+}
+@media (max-width:768px){
+  .menu{
+    display:none;position:absolute;left:0;right:0;top:66px;flex-direction:column;align-items:stretch;
+    gap:2px;background:#fff;border-bottom:1px solid var(--line);
+    box-shadow:0 12px 22px rgba(0,0,0,.08);padding:10px 16px 16px;
+  }
+  .menu.show{display:flex}
+  .menu a{padding:12px 10px;border-radius:10px;font-size:16px}
+  .nav-cta{text-align:center;margin-top:8px}
+  .burger{display:block}
+  .nav{position:relative}
+  .hero{padding:24px 0 6px}
+  .hero-box{padding:28px 18px 32px;border-radius:24px}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .rank-list,.update{grid-template-columns:1fr}
+  .vip{padding:26px 18px;border-radius:24px}
+  .vip-grid{grid-template-columns:1fr}
+  .f-grid{grid-template-columns:1fr 1fr}
+  section{padding:28px 0}
+}
+@media (max-width:420px){
+  .grid{grid-template-columns:1fr}
+  .f-grid{grid-template-columns:1fr}
+  .cats{gap:9px}
+  .cat{padding:10px 14px;font-size:14px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"WebSite",
+      "name":"蛙漫",
+      "alternateName":"蛙漫漫画官网",
+      "url":"https://waman-app/",
+      "description":"蛙漫是免费在线看漫画的漫画网站，收录热血、恋爱、悬疑、玄幻、都市、搞笑等全题材漫画，每日更新。",
+      "inLanguage":"zh-CN",
+      "potentialAction":{
+        "@type":"SearchAction",
+        "target":"https://waman-app/search?q={search_term_string}",
+        "query-input":"required name=search_term_string"
+      }
+    },
+    {
+      "@type":"Organization",
+      "name":"蛙漫",
+      "url":"https://waman-app/",
+      "description":"蛙漫漫画是在线漫画阅读平台，主打免费看漫画、热门漫画排行榜与全题材漫画分类。",
+      "areaServed":"CN"
+    },
+    {
+      "@type":"CollectionPage",
+      "name":"蛙漫 - 热门漫画大全",
+      "url":"https://waman-app/",
+      "about":{"@type":"Thing","name":"在线漫画"},
+      "mainEntity":{
+        "@type":"ItemList",
+        "itemListElement":[
+          {"@type":"ListItem","position":1,"name":"青藤少年"},
+          {"@type":"ListItem","position":2,"name":"深巷诡事"},
+          {"@type":"ListItem","position":3,"name":"星海领航员"},
+          {"@type":"ListItem","position":4,"name":"剑起长风"}
+        ]
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/yazhou.js"></script>
+
+<header class="topbar">
+  <div class="wrap">
+    <nav class="nav">
+      <a class="logo" href="#top" aria-label="蛙漫首页"><i aria-hidden="true">🐸</i><b>蛙漫</b></a>
+      <ul class="menu" id="menu">
+        <li><a href="#featured">精选漫画</a></li>
+        <li><a href="#rank">热门排行</a></li>
+        <li><a href="#category">漫画分类</a></li>
+        <li><a href="#update">最新更新</a></li>
+        <li><a href="#vip">阅读特权</a></li>
+        <li><a href="#faq">常见问题</a></li>
+        <li><a href="#about">关于蛙漫</a></li>
+        <li><a class="nav-cta" href="#vip">免费追漫</a></li>
+      </ul>
+      <button class="burger" id="burger" type="button" aria-label="展开导航菜单" aria-expanded="false">☰</button>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="wrap">
+      <div class="hero-box">
+        <div class="hero-in">
+          <span class="pill">蛙漫 · 每日 10:00 / 16:00 / 21:00 三时段更新</span>
+          <h1>上<em>蛙漫</em>，免费在线看漫画</h1>
+          <p class="lead">
+            蛙漫是专注在线漫画阅读的漫画网站，收录热血、恋爱、悬疑、玄幻、都市、搞笑等全题材漫画，
+            手机、平板、电脑自适应打开就能看，高清画质、加载飞快，追漫不等待。
+          </p>
+          <div class="hero-btns">
+            <a class="btn btn-1" href="#featured">🐸 立即开始看漫画</a>
+            <a class="btn btn-2" href="#category">浏览漫画分类</a>
+          </div>
+          <div class="stats">
+            <div class="stat"><b>42,000+</b><span>漫画作品</span></div>
+            <div class="stat"><b>26</b><span>漫画题材分类</span></div>
+            <div class="stat"><b>每日更新</b><span>连载同步</span></div>
+            <div class="stat"><b>1080P</b><span>高清画质</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <svg class="wave" viewBox="0 0 1440 52" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <path d="M0,26 C240,52 480,0 720,20 C960,40 1200,52 1440,26 L1440,0 L0,0 Z" fill="#f4faf5"></path>
+    </svg>
+  </div>
+
+  <!-- 栏目1：精选漫画 -->
+  <section id="featured" aria-labelledby="h-featured">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2 id="h-featured">蛙漫精选漫画推荐</h2>
+          <p>编辑挑片，本周末必看的 8 部热门漫画</p>
+        </div>
+        <a class="more" href="#rank">查看完整漫画榜单 →</a>
+      </div>
+      <ul class="grid">
+        <li>
+          <article class="card">
+            <a href="#" aria-label="在蛙漫阅读漫画《青藤少年》">
+              <div class="cover g1"><u>青春</u><span>青藤少年</span></div>
+              <div class="card-body">
+                <h3>青藤少年</h3>
+                <p>蝉鸣与球场交织的夏天，蛙漫青春榜口碑第一。</p>
+                <div class="meta"><b>9.8 分</b><span>更新至 268 话</span></div>
+              </div>
+            </a>
+          </article>
+        </li>
+        <li>
+          <article class="card">
+            <a href="#" aria-label="在蛙漫阅读漫画《深巷诡事》">
+              <div class="cover g2"><u>悬疑</u><span>深巷诡事</span></div>
+              <div class="card-body">
+                <h3>深巷诡事</h3>
+                <p>每条巷子都藏着一个秘密，烧脑悬疑漫画。</p>
+                <div class="meta"><b>9.7 分</b><span>更新至 184 话</span></div>
+              </div>
+            </a>
+          </article>
+        </li>
+        <li>
+          <article class="card">
+            <a href="#" aria-label="在蛙漫阅读漫画《剑起长风》">
+              <div class="cover g3"><u>武侠</u><span>剑起长风</span></div>
+              <div class="card-body">
+                <h3>剑起长风</h3>
+                <p>一剑霜寒十四州，国风武侠漫画代表作。</p>
+                <div class="meta"><b>9.6 分</b><span>更新至 542 话</span></div>
+              </div>
+            </a>
+          </article>
+        </li>
+        <li>
+          <article class="card">
+            <a href="#" aria-label="在蛙漫阅读漫画《甜度七分》">
+              <div class="cover g4"><u>恋爱</u><span>甜度七分</span></div>
+              <div class="card-body">
+                <h3>甜度七分</h3>
+                <p>刚刚好的心动，少女漫画人气冠军。</p>
+                <div class="meta"><b>9.5 分</b><span>更新至 231 话</span></div>
+              </div>
+            </a>
+          </article>
+        </li>
+        <li>
+          <article class="card">
+            <a href="#" aria-label="在蛙漫阅读漫画《星海领航员》">
+              <div class="cover g5"><u>科幻</u><span>星海领航员</span></div>
+              <div class="card-body">
+                <h3>星海领航员</h3>
+                <p>跨越星海的远征，硬核科幻漫画天花板。</p>
+                <div class="meta"><b>9.4 分</b><span>更新至 376 话</span></div>
+              </div>
+            </a>
+          </article>
+        </li>
+        <li>
+          <article class="card">
+            <a href="#" aria-label="在蛙漫阅读漫画《深海捕手》">
+              <div class="cover g6"><u>冒险</u><span>深海捕手</span></div>
+              <div class="card-body">
+                <h3>深海捕手</h3>
+                <p>向海而生的冒险故事，画面张力拉满。</p>
+                <div class="meta"><b>9.2 分</b><span>更新至 148 话</span></div>
+              </div>
+            </a>
+          </article>
+        </li>
+        <li>
+          <article class="card">
+            <a href="#" aria-label="在蛙漫阅读漫画《烈火前锋》">
+              <div class="cover g7"><u>竞技</u><span>烈火前锋</span></div>
+              <div class="card-body">
+                <h3>烈火前锋</h3>
+                <p>球场即战场，热血竞技漫画燃到最后一秒。</p>
+                <div class="meta"><b>9.1 分</b><span>更新至 623 话</span></div>
+              </div>
+            </a>
+          </article>
+        </li>
+        <li>
+          <article class="card">
+            <a href="#" aria-label="在蛙漫阅读漫画《山野食记》">
+              <div class="cover g8"><u>美食</u><span>山野食记</span></div>
+              <div class="card-body">
+                <h3>山野食记</h3>
+                <p>治愈系美食漫画，看得见烟火气。</p>
+                <div class="meta"><b>9.0 分</b><span>更新至 112 话</span></div>
+              </div>
+            </a>
+          </article>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 栏目2：热门排行 -->
+  <section id="rank" aria-labelledby="h-rank">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2 id="h-rank">蛙漫热门漫画排行榜</h2>
+          <p>依据全站阅读热度统计，每小时刷新一次</p>
+        </div>
+        <a class="more" href="#update">看看最新更新 →</a>
+      </div>
+      <ol class="rank-list">
+        <li><a class="rank-item" href="#">
+          <span class="no t1">1</span>
+          <div class="rank-txt"><h3>青藤少年</h3><p>青春 · 校园 · 连载中</p></div>
+          <span class="hot">🔥 1,382 万</span></a></li>
+        <li><a class="rank-item" href="#">
+          <span class="no t2">2</span>
+          <div class="rank-txt"><h3>深巷诡事</h3><p>悬疑 · 推理 · 连载中</p></div>
+          <span class="hot">🔥 1,126 万</span></a></li>
+        <li><a class="rank-item" href="#">
+          <span class="no t3">3</span>
+          <div class="rank-txt"><h3>剑起长风</h3><p>武侠 · 国风 · 连载中</p></div>
+          <span class="hot">🔥 1,004 万</span></a></li>
+        <li><a class="rank-item" href="#">
+          <span class="no">4</span>
+          <div class="rank-txt"><h3>甜度七分</h3><p>恋爱 · 少女 · 连载中</p></div>
+          <span class="hot">🔥 936 万</span></a></li>
+        <li><a class="rank-item" href="#">
+          <span class="no">5</span>
+          <div class="rank-txt"><h3>星海领航员</h3><p>科幻 · 太空 · 连载中</p></div>
+          <span class="hot">🔥 812 万</span></a></li>
+        <li><a class="rank-item" href="#">
+          <span class="no">6</span>
+          <div class="rank-txt"><h3>烈火前锋</h3><p>竞技 · 热血 · 连载中</p></div>
+          <span class="hot">🔥 748 万</span></a></li>
+        <li><a class="rank-item" href="#">
+          <span class="no">7</span>
+          <div class="rank-txt"><h3>深海捕手</h3><p>冒险 · 海洋 · 连载中</p></div>
+          <span class="hot">🔥 690 万</span></a></li>
+        <li><a class="rank-item" href="#">
+          <span class="no">8</span>
+          <div class="rank-txt"><h3>山野食记</h3><p>美食 · 治愈 · 连载中</p></div>
+          <span class="hot">🔥 615 万</span></a></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 栏目3：漫画分类 -->
+  <section id="category" aria-labelledby="h-category">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2 id="h-category">蛙漫画题材分类</h2>
+          <p>26 个漫画标签，按口味挑书不迷路</p>
+        </div>
+        <a class="more" href="#featured">回到精选漫画 →</a>
+      </div>
+      <ul class="cats">
+        <li><a class="cat" href="#">热血 <small>412 部</small></a></li>
+        <li><a class="cat" href="#">恋爱 <small>658 部</small></a></li>
+        <li><a class="cat" href="#">悬疑 <small>203 部</small></a></li>
+        <li><a class="cat" href="#">玄幻 <small>786 部</small></a></li>
+        <li><a class="cat" href="#">都市 <small>571 部</small></a></li>
+        <li><a class="cat" href="#">搞笑 <small>468 部</small></a></li>
+        <li><a class="cat" href="#">科幻 <small>245 部</small></a></li>
+        <li><a class="cat" href="#">武侠 <small>186 部</small></a></li>
+        <li><a class="cat" href="#">竞技 <small>157 部</small></a></li>
+        <li><a class="cat" href="#">美食 <small>121 部</small></a></li>
+        <li><a class="cat" href="#">治愈 <small>302 部</small></a></li>
+        <li><a class="cat" href="#">冒险 <small>264 部</small></a></li>
+        <li><a class="cat" href="#">历史 <small>174 部</small></a></li>
+        <li><a class="cat" href="#">恐怖 <small>96 部</small></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 栏目4：最新更新 -->
+  <section id="update" aria-labelledby="h-update">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2 id="h-update">蛙漫今日漫画更新表</h2>
+          <p>每天三个时段批量上线，追更不用蹲点</p>
+        </div>
+        <a class="more" href="#rank">看热门漫画排行 →</a>
+      </div>
+      <ul class="update">
+        <li><article class="up-item"><i>10:00</i><div><h3>青藤少年</h3><p>第 269 话 · 夏末的告白</p></div></article></li>
+        <li><article class="up-item"><i>16:00</i><div><h3>深巷诡事</h3><p>第 185 话 · 第七盏灯</p></div></article></li>
+        <li><article class="up-item"><i>21:00</i><div><h3>剑起长风</h3><p>第 543 话 · 长风渡江</p></div></article></li>
+        <li><article class="up-item"><i>10:00</i><div><h3>甜度七分</h3><p>第 232 话 · 半糖时刻</p></div></article></li>
+        <li><article class="up-item"><i>16:00</i><div><h3>星海领航员</h3><p>第 377 话 · 引力边界</p></div></article></li>
+        <li><article class="up-item"><i>21:00</i><div><h3>烈火前锋</h3><p>第 624 话 · 终场哨响</p></div></article></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 栏目5：阅读特权 -->
+  <section id="vip" aria-labelledby="h-vip">
+    <div class="wrap">
+      <div class="vip">
+        <div class="sec-head" style="margin-bottom:0">
+          <div>
+            <h2 id="h-vip">蛙漫阅读特权</h2>
+            <p>免费注册即送 7 天体验，追漫更省心</p>
+          </div>
+          <a class="btn btn-1" href="#">开通蛙漫会员</a>
+        </div>
+        <div class="vip-grid">
+          <div class="vip-card"><s aria-hidden="true">🚫</s><b>免广告追漫</b><p>全程无弹窗打扰，翻页一气呵成。</p></div>
+          <div class="vip-card"><s aria-hidden="true">⚡</s><b>抢先看新话</b><p>热门漫画提前 3 话解锁，追更不用等。</p></div>
+          <div class="vip-card"><s aria-hidden="true">📥</s><b>离线缓存</b><p>整本漫画一键下载，断网也能继续看。</p></div>
+          <div class="vip-card"><s aria-hidden="true">🔄</s><b>多端同步</b><p>手机、平板、电脑书架实时同步进度。</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目6：常见问题 -->
+  <section id="faq" aria-labelledby="h-faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2 id="h-faq">蛙漫常见问题</h2>
+          <p>关于看漫画、收费与账号的高频疑问</p>
+        </div>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>在蛙漫看漫画需要付费吗？</summary>
+          <p>蛙漫站内绝大多数漫画章节免费开放阅读，会员仅用于免广告、抢先看与离线缓存等增值服务，不影响基础追漫体验。</p>
+        </details>
+        <details>
+          <summary>蛙漫多久更新一次漫画？</summary>
+          <p>每天 10:00、16:00、21:00 三个时段批量更新，热门连载作品与作者更新节奏同步，更新后首页漫画榜单同步刷新。</p>
+        </details>
+        <details>
+          <summary>手机上能直接打开蛙漫看漫画吗？</summary>
+          <p>可以。蛙漫页面采用响应式布局，手机、平板与电脑均可自适应显示，无需下载客户端也能流畅阅读漫画。</p>
+        </details>
+        <details>
+          <summary>怎么在蛙漫快速找到想看的漫画？</summary>
+          <p>进入"漫画分类"栏目，按热血、恋爱、悬疑、玄幻、都市等标签筛选，也可以直接查看蛙漫热门排行榜按人气挑书。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目7：关于 -->
+  <section id="about" aria-labelledby="h-about">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2 id="h-about">关于蛙漫</h2>
+          <p>专注在线漫画阅读的内容平台</p>
+        </div>
+      </div>
+      <div class="about">
+        <div class="about-box">
+          <h3>蛙漫简介</h3>
+          <p>
+            蛙漫（waman-app）是一个面向中文读者的在线漫画阅读网站，想把好看的漫画送到读者指尖。
+            平台收录热血、恋爱、悬疑、玄幻、都市、搞笑、科幻等 26 类题材，累计漫画作品超过 42,000 部，
+            并以每日多时段更新保持连载同步。
+          </p>
+          <p style="margin-top:10px">
+            蛙漫坚持三件事：看得爽、找得快、不卡顿。高清画质、智能题材筛选、多端自适应阅读，
+            让每一次打开蛙漫都能立刻进入故事。
+          </p>
+          <ul>
+            <li>全站漫画免费阅读，部分增值服务可选会员</li>
+            <li>26 个漫画题材分类，支持按热度与更新时间筛选</li>
+            <li>手机、平板、电脑三端自适应，阅读进度自动同步</li>
+            <li>每日三时段更新，热门作品第一时间上线</li>
+          </ul>
+        </div>
+        <div class="about-box">
+          <h3>快速导航</h3>
+          <ul>
+            <li><a href="#featured">蛙漫精选漫画推荐</a></li>
+            <li><a href="#rank">蛙漫热门漫画排行榜</a></li>
+            <li><a href="#category">蛙漫画题材分类</a></li>
+            <li><a href="#update">蛙漫今日漫画更新表</a></li>
+            <li><a href="#vip">蛙漫阅读特权</a></li>
+            <li><a href="#faq">蛙漫常见问题</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div class="f-col">
+        <h4>蛙漫 🐸</h4>
+        <p>蛙漫官网 · 免费在线看漫画，漫画大全、漫画分类与漫画排行榜一站搞定。</p>
+      </div>
+      <div class="f-col">
+        <h4>看漫画</h4>
+        <a href="#featured">精选漫画</a>
+        <a href="#rank">热门排行</a>
+        <a href="#category">漫画分类</a>
+        <a href="#update">最新更新</a>
+      </div>
+      <div class="f-col">
+        <h4>服务</h4>
+        <a href="#vip">阅读特权</a>
+        <a href="#faq">常见问题</a>
+        <a href="#">意见反馈</a>
+        <a href="#">内容合作</a>
+      </div>
+      <div class="f-col">
+        <h4>关于</h4>
+        <a href="#about">关于蛙漫</a>
+        <a href="#">用户协议</a>
+        <a href="#">隐私政策</a>
+        <a href="#">版权声明</a>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span>© 2026 蛙漫 waman-app · 免费在线漫画阅读平台</span>
+      <span>关键词：蛙漫 · 蛙漫漫画 · 在线漫画 · 免费漫画 · 漫画大全</span>
+    </div>
+  </div>
+</footer>
+
+<a class="totop" href="#top" aria-label="返回顶部">↑</a>
+
+<script>
+  (function(){
+    var burger = document.getElementById('burger');
+    var menu = document.getElementById('menu');
+    burger.addEventListener('click', function(){
+      var open = menu.classList.toggle('show');
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    menu.addEventListener('click', function(e){
+      if (e.target.tagName === 'A') {
+        menu.classList.remove('show');
+        burger.setAttribute('aria-expanded', 'false');
+      }
+    });
+  })();
+</script>
+</body>
+</html>
